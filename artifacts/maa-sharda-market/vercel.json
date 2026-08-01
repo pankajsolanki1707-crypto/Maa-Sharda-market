@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "buildCommand": "pnpm run build",
+  "buildCommand": "pnpm run build && node -e \"const fs=require('fs'); fs.cpSync('dist', 'public', {recursive:true});\"",
   "outputDirectory": "dist",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
