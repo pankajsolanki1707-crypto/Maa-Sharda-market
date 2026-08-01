@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "vite",
+  "framework": null,
   "buildCommand": "pnpm --filter @workspace/maa-sharda-market run build",
-  "outputDirectory": "artifacts/maa-sharda-market/dist/public",
+  "outputDirectory": "artifacts/maa-sharda-market/dist",
   "installCommand": "pnpm install",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
