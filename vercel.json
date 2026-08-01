@@ -1,0 +1,6 @@
+{
+  "buildCommand": "pnpm --filter @workspace/maa-sharda-market run build",
+  "outputDirectory": "artifacts/maa-sharda-market/dist/public",
+  "installCommand": "pnpm install",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
