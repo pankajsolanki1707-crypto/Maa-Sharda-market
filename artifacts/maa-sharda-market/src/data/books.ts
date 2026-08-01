@@ -1,5 +1,5 @@
-import collectorSahibaCover from '@assets/Screenshot_2026-08-01_161618_1785581664692.png';
-import darkPsychologyCover from '@assets/Screenshot_2026-08-01_161638_1785581664692.png';
+const collectorSahibaCover = '/images/collector-sahiba.png';
+const darkPsychologyCover = '/images/dark-psychology.png';
 
 export interface Book {
   id: string;

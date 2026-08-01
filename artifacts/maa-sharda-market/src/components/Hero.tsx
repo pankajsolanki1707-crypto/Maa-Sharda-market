@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, BookOpen, Star, Users, MapPin } from 'lucide-react';
-import storeExterior from '@assets/Screenshot_2026-08-01_161705_1785581664691.png';
+const storeExterior = '/images/store-exterior.png';
 
 export function Hero() {
   const handleBrowse = () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, ThumbsUp, Zap, Clock, ShieldCheck, Tag, Truck } from 'lucide-react';
-import ownerSitting from '@assets/Screenshot_2026-08-01_161649_1785581664692.png';
-import ownerStanding from '@assets/Screenshot_2026-08-01_161628_1785581664692.png';
+const ownerSitting = '/images/owner-sitting.png';
+const ownerStanding = '/images/owner-standing.png';
 
 export function WhyChooseUs() {
   const benefits = [

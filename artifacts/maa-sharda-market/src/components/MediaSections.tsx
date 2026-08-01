@@ -2,9 +2,9 @@ import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { Star, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
-import storeExterior from '@assets/Screenshot_2026-08-01_161705_1785581664691.png';
-import ownerStanding from '@assets/Screenshot_2026-08-01_161628_1785581664692.png';
-import storePhoto3 from '@assets/Screenshot_2026-08-01_161610_1785581664693.png';
+const storeExterior = '/images/store-exterior.png';
+const ownerStanding = '/images/owner-standing.png';
+const storePhoto3 = '/images/store-photo3.png';
 
 export function Gallery() {
   const images = [storeExterior, ownerStanding, storePhoto3];
