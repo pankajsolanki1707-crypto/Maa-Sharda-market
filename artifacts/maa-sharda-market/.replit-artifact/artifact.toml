@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Maa Sharda Market"
+description = "A premium, mobile-first bookstore website for Maa Sharda Market — a beloved neighborhood bookstore in Bhanwarkua, Indore. The site showcases their catalogue of school, college, competitive exam, and novel books, and converts visitors into WhatsApp orders. No payment gateway — ordering is done via WhatsApp with Cash on Delivery."
+version = "1.0.0"
+id = "artifacts/maa-sharda-market"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24677
+
+[services.development]
+run = "pnpm --filter @workspace/maa-sharda-market run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/maa-sharda-market", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/maa-sharda-market/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24677"
+BASE_PATH = "/"

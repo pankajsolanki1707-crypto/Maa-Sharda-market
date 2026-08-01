@@ -1,0 +1,876 @@
+Excellent—this is enough information to build a premium website strategy. Based on the business profile, photos, and reviews you've shared, here's the strategic direction I'd recommend.
+
+---
+
+# WEBSITE STRATEGY
+
+## Maa Sharda Market
+
+### Premium Bookstore & Stationery Website
+
+## 1. Business Analysis
+
+### Business Name
+
+**Maa Sharda Market (मा शारदा मार्केट)**
+
+### Category
+
+Book Store • Competitive Exam Books • School & College Books • Novels • Stationery
+
+### Address
+
+Payal Plaza,
+Bhawarkua Main Road,
+Bhanwarkua Square,
+Indore, MP
+
+### Rating
+
+⭐ **4.9 / 5**
+(414 Reviews)
+
+### Contact
+
+09977777985
+
+---
+
+## What they sell
+
+They are not just another bookstore.
+
+They are one of the largest neighborhood bookstores around Bhawarkua serving
+
+• School Books
+
+• College Books
+
+• Engineering Books
+
+• Medical Books
+
+• Pharmacy Books
+
+• UPSC
+
+• SSC
+
+• MPPSC
+
+• Railway
+
+• Novels
+
+• Self Help
+
+• Stationery
+
+• Competitive Exam Books
+
+• Home Delivery
+
+---
+
+## Target Audience
+
+College Students
+
+Engineering Students
+
+Medical Students
+
+UPSC Aspirants
+
+MPPSC Aspirants
+
+SSC Aspirants
+
+Parents
+
+Teachers
+
+Nearby coaching students
+
+Readers
+
+Professionals
+
+---
+
+## Why customers choose them
+
+Huge collection
+
+Affordable pricing
+
+Hard-to-find books
+
+Friendly owner
+
+Fast ordering
+
+Home Delivery
+
+Quick response
+
+Good discounts
+
+Exam books available immediately
+
+---
+
+## Website Goal
+
+One goal only.
+
+Convert visitors into WhatsApp orders.
+
+Everything should encourage users to order instantly.
+
+---
+
+# WEBSITE STYLE
+
+Not luxury.
+
+Not corporate.
+
+Think
+
+Amazon Books × Crossword × Modern Local Store
+
+Warm
+
+Friendly
+
+Trustworthy
+
+Student-focused
+
+Fast
+
+Simple
+
+Professional
+
+---
+
+# Brand Personality
+
+Knowledge
+
+Affordable
+
+Helpful
+
+Reliable
+
+Friendly
+
+Student First
+
+---
+
+# Mood
+
+Bright
+
+Modern
+
+Bookish
+
+Organized
+
+Premium
+
+Minimal
+
+---
+
+# Color Palette
+
+Primary
+
+#B71C1C
+Deep Book Red
+
+Secondary
+
+#F9A825
+Golden Yellow
+
+Accent
+
+#1565C0
+Blue
+
+Background
+
+#FAFAFA
+
+Cards
+
+#FFFFFF
+
+Heading
+
+#1E1E1E
+
+Paragraph
+
+#555555
+
+Buttons
+
+WhatsApp Green
+
+#25D366
+
+Buy Button
+
+#B71C1C
+
+Hover
+
+#8E0000
+
+---
+
+# Typography
+
+Heading
+
+Poppins Bold
+
+Body
+
+Inter
+
+Button
+
+Poppins SemiBold
+
+---
+
+# Logo
+
+Keep Hindi identity.
+
+Use an open book icon.
+
+Golden pages.
+
+Red typography.
+
+Horizontal logo
+
+Book icon + Maa Sharda Market
+
+Square favicon
+
+Simple open book
+
+---
+
+# Pages
+
+Home
+
+About
+
+Books
+
+Competitive Exams
+
+Stationery
+
+Gallery
+
+Reviews
+
+Contact
+
+---
+
+# Homepage Structure
+
+Announcement Bar
+
+"📚 Up to 60% OFF | Cash on Delivery Available | Home Delivery in Bhanwarkua"
+
+---
+
+Navigation
+
+Logo
+
+Home
+
+Books
+
+Competitive
+
+Gallery
+
+Reviews
+
+Contact
+
+WhatsApp Button
+
+---
+
+Hero
+
+Big bookstore photograph
+
+Headline
+
+### Indore's Trusted Bookstore for Students & Readers
+
+Subheadline
+
+School Books • College Books • Competitive Exam Books • Novels • Stationery — Everything Under One Roof.
+
+Buttons
+
+Browse Books
+
+WhatsApp
+
+---
+
+Trust Bar
+
+⭐⭐⭐⭐⭐ 4.9 Rating
+
+414 Reviews
+
+Since Years
+
+Thousands of Books
+
+Home Delivery
+
+---
+
+Featured Categories
+
+Competitive Exams
+
+Novels
+
+Engineering
+
+Medical
+
+School
+
+Stationery
+
+---
+
+Featured Books
+
+10 Bestseller cards
+
+Each card includes
+
+Book Image
+
+Discount Badge
+
+Book Name
+
+MRP
+
+Sale Price
+
+Short Description
+
+Add to Cart
+
+Buy Now
+
+---
+
+Why Choose Us
+
+Huge Collection
+
+Affordable Prices
+
+Original Books
+
+Quick Orders
+
+Friendly Staff
+
+Student Discounts
+
+Home Delivery
+
+---
+
+Owner Section
+
+Use owner's photograph.
+
+Heading
+
+Meet the Owner
+
+Paragraph
+
+"Our goal is to help every student find the right book at the right price."
+
+---
+
+Gallery
+
+Store Images
+
+Shelves
+
+Books
+
+Students
+
+Owner
+
+---
+
+Reviews
+
+Google Reviews
+
+Highlight
+
+Great collection
+
+Affordable
+
+Friendly owner
+
+Quick delivery
+
+---
+
+FAQ
+
+Do you deliver?
+
+Can I order on WhatsApp?
+
+Cash on Delivery?
+
+Pickup Available?
+
+Exam books available?
+
+---
+
+Map
+
+Embedded Google Maps
+
+Directions Button
+
+---
+
+Footer
+
+Address
+
+Hours
+
+Phone
+
+WhatsApp
+
+Instagram
+
+Google Maps
+
+---
+
+# Premium Book Catalogue
+
+After Hero.
+
+Not later.
+
+Immediately after introduction.
+
+Large section.
+
+Headline
+
+## Bestselling Books
+
+Subtitle
+
+Most Loved Books by Students & Readers
+
+Grid
+
+Desktop
+
+5 Columns
+
+Mobile
+
+2 Columns
+
+Hover Animation
+
+Book lifts
+
+Shadow increases
+
+Button slides
+
+---
+
+Each Book Card
+
+Book Cover
+
+Discount Badge
+
+Book Name
+
+Author
+
+MRP
+
+Sale Price
+
+Availability
+
+Short Description
+
+Buy Now
+
+Add to Cart
+
+---
+
+Books
+
+Parmar SSC Fatman
+
+MRP ₹549
+
+Sale ₹449
+
+Complete GK & GS guide for SSC and competitive exams.
+
+---
+
+Wings of Fire
+
+MRP ₹399
+
+Sale ₹149
+
+Inspirational autobiography of Dr. APJ Abdul Kalam.
+
+---
+
+The Courage to Be Disliked
+
+Sale ₹149
+
+A life-changing book on freedom, confidence, and happiness.
+
+---
+
+Power
+
+MRP ₹699
+
+Sale ₹149
+
+Robert Greene's lessons on influence and strategic thinking.
+
+---
+
+Power of Your Subconscious Mind
+
+MRP ₹399
+
+Sale ₹149
+
+Learn how positive thinking transforms life.
+
+---
+
+Art of War
+
+MRP ₹399
+
+Sale ₹149
+
+Classic strategies for leadership and decision-making.
+
+---
+
+Art of Detachment
+
+Sale ₹149
+
+Practical guide to emotional balance and peace.
+
+---
+
+Don't Believe Everything You Think
+
+Sale ₹149
+
+Learn to overcome anxiety and overthinking.
+
+---
+
+Art of Reading Minds
+
+Sale ₹149
+
+Understand people better using psychology.
+
+---
+
+Art of Not Overthinking
+
+Sale ₹149
+
+Simple techniques to reduce stress and improve focus.
+
+---
+
+# Ordering System
+
+No online payment.
+
+Only
+
+Cash on Delivery
+
+Store Pickup
+
+---
+
+Checkout Popup
+
+Customer selects
+
+Home Delivery
+
+Store Pickup
+
+---
+
+If Home Delivery
+
+Fields
+
+Full Name
+
+Phone Number
+
+Address
+
+Nearby Landmark
+
+Book Name
+
+Quantity
+
+Submit
+
+---
+
+If Store Pickup
+
+Fields
+
+Name
+
+Phone Number
+
+Book Name
+
+Quantity
+
+Submit
+
+---
+
+After Submit
+
+Automatically opens WhatsApp.
+
+Message
+
+```
+📚 New Book Order
+
+Customer Name:
+Phone:
+
+Order Type:
+Home Delivery / Store Pickup
+
+Books:
+
+Quantity:
+
+Address:
+
+Total:
+
+Please confirm my order.
+```
+
+---
+
+No payment gateway.
+
+---
+
+# Image Style
+
+Real shop photos.
+
+Real shelves.
+
+Real books.
+
+Owner photos.
+
+Students buying books.
+
+Warm lighting.
+
+Avoid stock photos where possible.
+
+---
+
+# Animations
+
+Sticky navbar
+
+Smooth scrolling
+
+Book hover lift
+
+Button ripple
+
+Fade in
+
+Slide up
+
+Number counter
+
+Review carousel
+
+Gallery zoom
+
+Floating WhatsApp
+
+Back to top
+
+---
+
+# Mobile
+
+Sticky WhatsApp
+
+Sticky Call
+
+Two-column books
+
+Fast loading
+
+Compressed images
+
+Lazy loading
+
+Large touch buttons
+
+---
+
+# Local SEO
+
+Keywords
+
+Book Store in Bhanwarkua
+
+Book Store in Indore
+
+Competitive Exam Books
+
+SSC Books
+
+UPSC Books
+
+Engineering Books
+
+Medical Books
+
+Novel Store Indore
+
+Stationery Shop
+
+---
+
+Meta Title
+
+Maa Sharda Market | Book Store in Bhanwarkua, Indore | School, College & Competitive Exam Books
+
+Meta Description
+
+Visit Maa Sharda Market in Bhanwarkua, Indore for school books, college books, competitive exam books, novels, stationery, and home delivery. Rated 4.9★ by 414+ customers.
+
+---
+
+# Conversion Features
+
+✓ WhatsApp Order
+
+✓ Call Now
+
+✓ Google Maps
+
+✓ Review Button
+
+✓ Home Delivery Form
+
+✓ Store Pickup Form
+
+✓ Bestseller Catalogue
+
+✓ Search Books
+
+✓ Category Filter
+
+✓ Recently Added Books
+
+✓ Floating WhatsApp
+
+✓ Sticky Mobile Call
+
+✓ Google Reviews
+
+✓ FAQ
+
+✓ Contact Form
+
+✓ Order Confirmation Popup
+
+---
+
+## Overall Design Vision
+
+The final website should feel like a **modern Amazon Books storefront built specifically for a trusted local bookstore**. Use real store photography, premium card layouts, subtle shadows, clean typography, and a warm color palette that reflects the physical shop. Every section should guide visitors naturally toward browsing books and placing a WhatsApp order. The experience should be fast, mobile-first, visually polished, and optimized for conversions while preserving the local, trustworthy identity that has earned Maa Sharda Market its 4.9-star reputation.

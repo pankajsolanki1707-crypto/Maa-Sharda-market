@@ -1,6 +1,6 @@
-# [Project name]
+# Maa Sharda Market
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A premium, mobile-first bookstore website for Maa Sharda Market — a beloved neighborhood bookstore in Bhanwarkua, Indore rated 4.9★ by 414+ customers. The site converts visitors into WhatsApp orders (Cash on Delivery, no payment gateway).
 
 ## Run & Operate
 

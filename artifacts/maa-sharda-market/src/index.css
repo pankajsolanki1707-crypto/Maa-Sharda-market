@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: var(--primary-border);
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: var(--secondary-border);
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: var(--muted-border);
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: var(--accent-border);
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: var(--destructive-border);
+
+  --color-whatsapp: hsl(var(--whatsapp));
+  --color-whatsapp-hover: hsl(var(--whatsapp-hover));
+
+  --font-sans: var(--app-font-sans);
+  --font-heading: var(--app-font-heading);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --background: 0 0% 98%;      /* #FAFAFA */
+  --foreground: 0 0% 12%;      /* #1E1E1E */
+  --border: 0 0% 90%;          /* Light gray border */
+
+  --card: 0 0% 100%;           /* #FFFFFF */
+  --card-foreground: 0 0% 33%; /* #555555 */
+  --card-border: 0 0% 90%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 12%;
+  --popover-border: 0 0% 90%;
+
+  --primary: 0 74% 41%;        /* #B71C1C */
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 37 93% 56%;     /* #F9A825 */
+  --secondary-foreground: 0 0% 12%;
+
+  --muted: 0 0% 94%;
+  --muted-foreground: 0 0% 33%;
+
+  --accent: 212 80% 42%;       /* #1565C0 */
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --whatsapp: 142 71% 49%;     /* #25D366 */
+  --whatsapp-hover: 142 60% 40%;
+
+  --input: 0 0% 90%;
+  --ring: 0 74% 41%;
+
+  --app-font-sans: 'Inter', sans-serif;
+  --app-font-heading: 'Poppins', sans-serif;
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Using light mode as default, dark mode left minimal as requested default light */
+  --background: 0 0% 98%;
+  --foreground: 0 0% 12%;
+  --border: 0 0% 90%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 33%;
+  --card-border: 0 0% 90%;
+  --primary: 0 74% 41%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 37 93% 56%;
+  --secondary-foreground: 0 0% 12%;
+  --muted: 0 0% 94%;
+  --muted-foreground: 0 0% 33%;
+  --accent: 212 80% 42%;
+  --accent-foreground: 0 0% 100%;
+  --input: 0 0% 90%;
+  --ring: 0 74% 41%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-foreground;
+  }
+  p {
+    @apply text-card-foreground;
+  }
+}
