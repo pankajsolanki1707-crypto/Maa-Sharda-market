@@ -6,11 +6,19 @@ try {
   console.log('Running Vite production build...');
   execSync('pnpm --filter @workspace/maa-sharda-market run build', { stdio: 'inherit' });
   
-  const src = fs.existsSync('artifacts/maa-sharda-market/dist') 
-    ? 'artifacts/maa-sharda-market/dist' 
-    : 'dist';
-    
-  console.log(`Copying build from: ${src}`);
+  const possibleSrcs = [
+    'artifacts/maa-sharda-market/dist',
+    '../maa-sharda-market/dist',
+    '../../artifacts/maa-sharda-market/dist',
+    'dist'
+  ];
+
+  const src = possibleSrcs.find(p => fs.existsSync(p));
+  if (!src) {
+    throw new Error('Could not find built dist folder');
+  }
+
+  console.log(`Copying build output from: ${src}`);
   if (src !== 'dist') {
     fs.cpSync(src, 'dist', { recursive: true });
   }
