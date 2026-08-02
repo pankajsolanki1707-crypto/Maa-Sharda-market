@@ -1,95 +1,121 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { BookCard } from './BookCard';
-import { books } from '../data/books';
-import { Award, BookOpen, GraduationCap, Microscope, PenTool, Stethoscope } from 'lucide-react';
+import { books, Book } from '../data/books';
+import { Search, SlidersHorizontal, Award, BookOpen, PenTool, Stethoscope, GraduationCap, Highlighter } from 'lucide-react';
 
 export function Categories() {
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+
   const categories = [
-    { name: 'Competitive Exams', icon: <Award size={32} />, color: 'bg-red-50 text-red-600 border-red-100' },
-    { name: 'Novels & Fiction', icon: <BookOpen size={32} />, color: 'bg-orange-50 text-orange-600 border-orange-100' },
-    { name: 'Engineering', icon: <PenTool size={32} />, color: 'bg-blue-50 text-blue-600 border-blue-100' },
-    { name: 'Medical', icon: <Stethoscope size={32} />, color: 'bg-green-50 text-green-600 border-green-100' },
-    { name: 'School Books', icon: <GraduationCap size={32} />, color: 'bg-purple-50 text-purple-600 border-purple-100' },
-    { name: 'Stationery', icon: <Microscope size={32} />, color: 'bg-yellow-50 text-yellow-600 border-yellow-100' },
+    { name: 'All', icon: <SlidersHorizontal size={20} />, color: 'bg-gray-100 text-gray-700 border-gray-200' },
+    { name: 'Competitive Exams', icon: <Award size={20} />, color: 'bg-red-50 text-primary border-red-100' },
+    { name: 'Novels', icon: <BookOpen size={20} />, color: 'bg-orange-50 text-orange-600 border-orange-100' },
+    { name: 'Engineering', icon: <PenTool size={20} />, color: 'bg-blue-50 text-accent border-blue-100' },
+    { name: 'Medical', icon: <Stethoscope size={20} />, color: 'bg-green-50 text-green-600 border-green-100' },
+    { name: 'School', icon: <GraduationCap size={20} />, color: 'bg-purple-50 text-purple-600 border-purple-100' },
+    { name: 'Stationery', icon: <Highlighter size={20} />, color: 'bg-yellow-50 text-yellow-600 border-yellow-100' },
   ];
 
-  const handleCategoryClick = () => {
-    document.querySelector('#bestsellers')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  // Filter book catalogue list
+  const filteredBooks = books.filter((book) => {
+    const matchesCategory = selectedCategory === 'All' || book.category === selectedCategory;
+    const matchesSearch = book.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                          (book.author && book.author.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
 
   return (
-    <section id="categories" className="py-16 bg-gray-50">
+    <section id="bestsellers" className="py-16 md:py-24 bg-[#FAFAFA] border-b border-gray-100">
       <div className="container mx-auto px-4 md:px-6">
+        
+        {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">What Are You Looking For?</h2>
-          <p className="text-gray-600">Find exactly what you need from our massive collection of books across all genres and subjects.</p>
+          <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-gray-900 mb-4 tracking-tight">
+            Premium Book Catalogue
+          </h2>
+          <p className="text-[#555555] font-sans text-base md:text-lg">
+            Search or filter from our bestselling database. Order instantly via WhatsApp.
+          </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {categories.map((cat, i) => (
-            <motion.button
-              key={i}
-              onClick={handleCategoryClick}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              whileHover={{ y: -5 }}
-              className={`flex flex-col items-center justify-center p-6 rounded-2xl border transition-all shadow-sm hover:shadow-md ${cat.color} group`}
-            >
-              <div className="mb-4 transform group-hover:scale-110 transition-transform">
-                {cat.icon}
-              </div>
-              <span className="font-heading font-semibold text-sm text-center text-gray-800">{cat.name}</span>
-            </motion.button>
-          ))}
+        {/* Search Bar & Filters */}
+        <div className="mb-12 space-y-6 max-w-4xl mx-auto">
+          {/* Search Box */}
+          <div className="relative">
+            <span className="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400 pointer-events-none">
+              <Search size={22} />
+            </span>
+            <input
+              type="text"
+              placeholder="Search books by title, author, or exam name..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-12 pr-6 py-4 rounded-2xl border border-gray-200 bg-white text-gray-800 placeholder-gray-400 font-sans shadow-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-base transition-all"
+            />
+          </div>
+
+          {/* Categories Horizontal Slider */}
+          <div className="flex items-center gap-3 overflow-x-auto pb-3 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
+            {categories.map((cat) => {
+              const isActive = selectedCategory === cat.name;
+              return (
+                <button
+                  key={cat.name}
+                  onClick={() => setSelectedCategory(cat.name)}
+                  className={`flex items-center gap-2 px-5 py-3 rounded-full border font-heading font-bold text-xs md:text-sm whitespace-nowrap transition-all duration-300 cursor-pointer ${
+                    isActive 
+                      ? 'bg-primary text-white border-primary shadow-md scale-105' 
+                      : 'bg-white hover:bg-gray-50 text-gray-700 border-gray-200 shadow-sm'
+                  }`}
+                >
+                  {cat.icon}
+                  {cat.name}
+                </button>
+              );
+            })}
+          </div>
         </div>
+
+        {/* Book Grid */}
+        <AnimatePresence mode="popLayout">
+          {filteredBooks.length === 0 ? (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              className="text-center py-20 bg-white rounded-3xl border border-gray-100 shadow-sm max-w-lg mx-auto"
+            >
+              <p className="text-gray-400 text-lg mb-3">No matching books found</p>
+              <p className="text-sm text-gray-500 mb-6">Can't find a specific book? Send us a message on WhatsApp and we will order it for you!</p>
+              <a 
+                href="https://wa.me/919977777985"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-heading font-bold text-sm"
+              >
+                Request Book on WhatsApp
+              </a>
+            </motion.div>
+          ) : (
+            <motion.div 
+              layout
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6"
+            >
+              {filteredBooks.map((book, index) => (
+                <BookCard key={book.id} book={book} index={index} />
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
       </div>
     </section>
   );
 }
 
+// Bestsellers component is kept as dummy since the functionality is merged into the Premium Book Catalogue above.
 export function Bestsellers() {
-  return (
-    <section id="bestsellers" className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-          <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Bestselling Books
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Most loved books by students & readers. Grab them before they run out!
-            </p>
-          </div>
-          <a 
-            href="https://wa.me/919977777985"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex mt-6 md:mt-0 items-center text-primary font-semibold hover:text-[#8E0000] transition-colors"
-          >
-            Can't find a book? WhatsApp us &rarr;
-          </a>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-          {books.map((book, index) => (
-            <BookCard key={book.id} book={book} index={index} />
-          ))}
-        </div>
-        
-        <div className="mt-12 text-center md:hidden">
-          <a 
-            href="https://wa.me/919977777985"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-primary font-semibold hover:text-[#8E0000] transition-colors bg-red-50 px-6 py-3 rounded-full"
-          >
-            Can't find a book? WhatsApp us
-          </a>
-        </div>
-      </div>
-    </section>
-  );
+  return null;
 }

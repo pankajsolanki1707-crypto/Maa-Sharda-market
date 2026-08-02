@@ -1,24 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MessageCircle, BookOpen, Star, Users, MapPin } from 'lucide-react';
+import { MessageCircle, BookOpen, Star, Users, MapPin, Award } from 'lucide-react';
 const storeExterior = '/images/store-exterior.png';
 
 export function Hero() {
   const handleBrowse = () => {
-    document.querySelector('#bestsellers')?.scrollIntoView({ behavior: 'smooth' });
+    const element = document.querySelector('#bestsellers');
+    if (element) {
+      const topOffset = element.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: topOffset, behavior: 'smooth' });
+    }
   };
 
   return (
-    <section id="home" className="relative bg-gray-900 pt-8 pb-16 md:pt-16 md:pb-24 overflow-hidden">
+    <section id="home" className="relative bg-gray-950 pt-16 pb-20 md:pt-24 md:pb-32 overflow-hidden border-b border-gray-900">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src={storeExterior} 
-          alt="Maa Sharda Market Storefront at night" 
-          className="w-full h-full object-cover opacity-40 mix-blend-overlay"
+          alt="Maa Sharda Market storefront on Bhawarkua Main Road" 
+          className="w-full h-full object-cover opacity-35 mix-blend-multiply"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent"></div>
       </div>
 
       <div className="container relative z-10 mx-auto px-4 md:px-6">
@@ -28,9 +32,9 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-secondary font-medium text-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#F9A825] font-heading font-bold text-xs md:text-sm mb-6">
               <Star size={16} fill="currentColor" />
-              <span>Rated 4.9/5 by 414+ Readers</span>
+              <span>Rated 4.9/5 by 414+ Indore Students</span>
             </div>
           </motion.div>
           
@@ -38,7 +42,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-6xl font-heading font-bold text-white leading-[1.1] mb-6"
+            className="text-4xl md:text-6xl font-heading font-extrabold text-white leading-[1.1] mb-6 tracking-tight"
           >
             Indore's Trusted Bookstore for <span className="text-primary drop-shadow-md">Students & Readers</span>
           </motion.h1>
@@ -47,9 +51,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed font-light"
+            className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed font-sans"
           >
-            School Books • College Books • Competitive Exam Books • Novels • Stationery — Everything Under One Roof at Bhanwarkua.
+            School Books • College Books • Competitive Exam Books • Novels • Stationery — Everything Under One Roof.
           </motion.p>
           
           <motion.div 
@@ -60,7 +64,7 @@ export function Hero() {
           >
             <button 
               onClick={handleBrowse}
-              className="bg-primary hover:bg-[#8E0000] text-white px-8 py-4 rounded-xl font-heading font-bold text-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-primary/20"
+              className="bg-primary hover:bg-[#8E0000] text-white px-8 py-4 rounded-xl font-heading font-extrabold text-base transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 cursor-pointer"
             >
               <BookOpen size={20} />
               Browse Books
@@ -69,7 +73,7 @@ export function Hero() {
               href="https://wa.me/919977777985"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-whatsapp hover:bg-whatsapp-hover text-white px-8 py-4 rounded-xl font-heading font-bold text-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-green-500/20"
+              className="bg-[#25D366] hover:bg-[#20ba59] text-white px-8 py-4 rounded-xl font-heading font-extrabold text-base transition-all flex items-center justify-center gap-2 shadow-lg shadow-green-500/20 hover:scale-105 active:scale-95"
             >
               <MessageCircle size={20} />
               WhatsApp Order
@@ -83,28 +87,28 @@ export function Hero() {
 
 export function TrustBar() {
   const stats = [
-    { icon: <Star className="text-secondary" size={24} />, value: "4.9/5", label: "Rating" },
-    { icon: <Users className="text-accent" size={24} />, value: "414+", label: "Reviews" },
-    { icon: <BookOpen className="text-primary" size={24} />, value: "10,000+", label: "Books" },
-    { icon: <MapPin className="text-whatsapp" size={24} />, value: "Fast", label: "Home Delivery" },
+    { icon: <Star className="text-[#F9A825]" size={26} />, value: "4.9/5", label: "414+ Reviews" },
+    { icon: <Users className="text-[#1565C0]" size={26} />, value: "Since Years", label: "Trusted Local Store" },
+    { icon: <BookOpen className="text-primary" size={26} />, value: "Thousands", label: "Of Original Books" },
+    { icon: <MapPin className="text-[#25D366]" size={26} />, value: "Bhanwarkua", label: "Fast Home Delivery" },
   ];
 
   return (
     <div className="bg-white border-b border-gray-100 py-8 relative z-20 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 divide-x divide-gray-100">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 divide-y md:divide-y-0 md:divide-x divide-gray-100">
           {stats.map((stat, i) => (
             <motion.div 
               key={i}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className={`flex flex-col items-center justify-center text-center ${i % 2 !== 0 ? 'border-l border-gray-100 md:border-none' : 'border-none'}`}
+              transition={{ delay: i * 0.08, duration: 0.4 }}
+              className="flex flex-col items-center justify-center text-center p-3"
             >
               <div className="mb-2 bg-gray-50 p-3 rounded-full">{stat.icon}</div>
-              <div className="text-2xl font-heading font-bold text-gray-900">{stat.value}</div>
-              <div className="text-sm font-medium text-gray-500">{stat.label}</div>
+              <div className="text-xl md:text-2xl font-heading font-extrabold text-gray-900">{stat.value}</div>
+              <div className="text-xs md:text-sm font-semibold text-gray-500 mt-0.5">{stat.label}</div>
             </motion.div>
           ))}
         </div>
